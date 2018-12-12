@@ -23,14 +23,21 @@ function determineTrueFaveNum(num) {
     return false
   }
 }
-var trueFaveNum =
-determineTrueFaveNum(3)
+var trueFaveNum = determineTrueFaveNum(3)
+
 
 //I got this off the internet, I remember doing this partly from a different exercise but I had a hard time with the wording of the question.
 //****ask Austin about this later****/
 
 // #6 Create a new variable called notHakeem. Using the previously created myName variable, test that your name DOES NOT equal the string 'Hakeem Olajuwon'. If your name does happen to be Hakeem Olajuwon, test against 'Karl Malone'
-
+var notHakeem = myName == "Hakeem Olajuwon"
+function notHakeemChecker(name){
+  if(name == 'Hakeem Olajuwon'){
+    return false
+  }else{ return true
+  }
+}
+var notHakeem = notHakeemChecker(myName)
 
 // #7 Create an if statement that checks the age variable below. If age is greater than 16, then set canDrive to true otherwise set canDrive to false. The canDrive variable will be set by the unit test so do not adjust it.
 var age = 18;
@@ -47,20 +54,19 @@ determineIfCanDrive(true)
 
 // #8 Create an if statement inside of the responseCreator function that sets the colorResponse variable value based off of a passed in value. The param value passed in will be added in the unit test. If the param value is 'green' set colorResponse variable to 'Green is okay'. If the param value is 'red' set reponse variable to 'I heart red'. Otherwise set the colorResponse variable to 'What is your favorite color?'. Make sure to return the colorResponse variable at the end once it has been properly set.
 
-var colorResponse;
-
-var responseCreator = function(param){
-  var colorResponse;
-  console.log(param)
-  if(param == 'Green'){
-    colorResponse = 'Green is okay';
-  }else if (param =='Red'){
-    colorResponse = 'I heart red'
-  } else {colorResponse = 'What is your favorite color?'
-  }return colorResponse
+  function responseCreator(color){
+    var colorResponse;
+    console.log(color)
+    if(color == 'green'){
+      colorResponse = 'Green is okay';
+    }else if (color =='red'){
+      colorResponse = 'I heart red'
+    } else {
+      colorResponse = 'What is your favorite color?'
+    } return colorResponse
   }
 
-  responseCreator('Green')
+  var colorResponse = responseCreator('green')
 
 //need to come back to this problem. Still have not figured out parameters and proper functions
 
